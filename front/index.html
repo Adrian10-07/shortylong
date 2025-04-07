@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Personas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Registro de Personas</h1>
+    
+    <div class="container">
+        <div class="form-section">
+            <h2>Registrar Nueva Persona</h2>
+            <form id="personaForm">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad" required min="1">
+                
+                <label for="sexo">Sexo:</label>
+                <select id="sexo" name="sexo" required>
+                    <option value="true">Hombre</option>
+                    <option value="false">Mujer</option>
+                </select>
+                
+                <label for="genero">Género:</label>
+                <input type="text" id="genero" name="genero" required>
+                
+                <button type="submit">Registrar Persona</button>
+            </form>
+        </div>
+        
+        <div class="counter-section">
+            <h2>Contador de Géneros</h2>
+            <div class="counters">
+                <div class="counter male">
+                    <h3>Hombres</h3>
+                    <p id="maleCount">0</p>
+                </div>
+                <div class="counter female">
+                    <h3>Mujeres</h3>
+                    <p id="femaleCount">0</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="recent-section">
+        <h2>Personas Registradas Recientemente</h2>
+        <div id="recentPersonas"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
